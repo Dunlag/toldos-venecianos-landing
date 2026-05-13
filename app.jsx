@@ -1,0 +1,266 @@
+/* === Toldo Venecianos — content + app composition === */
+
+const COPY = {
+  es: {
+    nav: { catalogue: "Catálogo", materials: "Materiales", studio: "Estudio", contact: "Presupuesto" },
+    hero: {
+      eyebrow: "Persianas y toldos · Madrid · Sevilla · 1998",
+      titleB: "Venecianos",
+      lede1: "Oficio de taller para",
+      lede2: "vestir la luz",
+      lede3: "de cada fachada. Medimos, fabricamos e instalamos.",
+      cta: "Pedir presupuesto",
+      cta2: "Ver catálogo",
+      met1: { t: "A medida", s: "Cada hueco se mide y se firma a mano." },
+      met2: { t: "Instalación propia", s: "Equipo en plantilla, sin subcontratas." },
+      met3: { t: "Garantía 10 años", s: "Mecanismos y acabados, sin letra pequeña." },
+    },
+    marquee: ["A medida", "Madera, aluminio y tela técnica", "Visita y presupuesto sin coste", "Mecanismo motorizable", "Garantía 10 años", "Talleres en Madrid y Sevilla"],
+    cat: {
+      eyebrow: "Catálogo",
+      titleA: "Tres familias,",
+      titleB: "una manera de hacer.",
+      meta: "Productos pensados para climas mediterráneos. Adaptables a fachada, balcón, terraza o interior.",
+      cta: "Pedir esta pieza",
+      items: [
+        {
+          name: "Persianas",
+          nameItalic: "venecianas.",
+          copy: "La pieza fundacional. Lamas horizontales orientables que dosifican la luz al milímetro y enmarcan la vista en líneas. Para ventanal, balconera o panel de techo a suelo.",
+          specs: ["Lama 25 / 35 / 50 mm", "8 maderas · 12 aluminios", "Cuerda o motor", "Interior y exterior"],
+          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Toldos",
+          nameItalic: "de brazo y cofre.",
+          copy: "Sombra que respira con el aire. Lonas acrílicas teñidas en masa y estructuras de aluminio extruido. Brazo articulado, cofre integral o pérgola bioclimática.",
+          specs: ["Hasta 6 m de salida", "30 lonas · 4 estructuras", "Sensor de viento incluido", "Motor Somfy"],
+          img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Cortinas",
+          nameItalic: "verticales y screen.",
+          copy: "Líneas que ordenan la mirada en oficinas, locales y dobles alturas. Tejido screen con factor solar de 1% a 14%, lamas verticales en tela o aluminio fino.",
+          specs: ["Lama 89 / 127 mm", "20 tejidos screen", "Cadena, manivela o motor", "Especial vidrieras grandes"],
+          img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80&auto=format&fit=crop",
+        },
+      ],
+    },
+    mat: {
+      eyebrow: "Materiales",
+      titleA: "Materia noble,",
+      titleB: "tacto que dura.",
+      meta: "Maderas tratadas en taller, aluminios anodizados y tejidos técnicos europeos. Acabados que envejecen con dignidad.",
+      s1: { n: "Cedro rojo", s: "Madera · cálida" },
+      s2: { n: "Teca birmana", s: "Madera · resistente" },
+      s3: { n: "Aluminio mate", s: "Metal · arquitectónico" },
+      s4: { n: "Aluminio bronce", s: "Metal · cálido" },
+      s5: { n: "Tela acrílica", s: "Tejido · 12 colores" },
+      s6: { n: "Screen técnico", s: "Tejido · solar" },
+    },
+    est: {
+      eyebrow: "Estudio",
+      titleA: "Veintiséis años",
+      titleB: "vistiendo ventanas.",
+      meta: "Tres generaciones de un mismo taller. Empezamos en un pasaje de Madrid en 1998 y seguimos midiendo cada hueco a mano.",
+      figcap: "Taller de Madrid · 2025",
+      p1: "Llevamos más de dos décadas vistiendo fachadas y ventanas en hogares, locales y proyectos singulares. Trabajamos en taller propio, medimos cada vano y firmamos cada instalación. No hacemos catálogo: hacemos piezas que duran.",
+      p2: "Lo que se hace bien, se hace una vez.",
+      s1: "Años de oficio",
+      s2: "Proyectos firmados",
+      s3: "Acabados disponibles",
+      s4: "Talleres propios",
+    },
+    con: {
+      eyebrow: "Presupuesto",
+      titleA: "Cuéntanos",
+      titleB: "el proyecto.",
+      meta: "Te visitamos, medimos y enviamos un presupuesto en menos de cinco días laborables. Sin compromiso.",
+      f: {
+        name: "Nombre", namePh: "Cómo te llamas",
+        email: "Email",
+        loc: "Localización", locPh: "Ciudad o código postal",
+        type: "Tipo de proyecto", typePh: "Selecciona —",
+        opt1: "Vivienda particular", opt2: "Local comercial", opt3: "Hostelería / hotel", opt4: "Reforma o nueva obra",
+        msg: "Detalles", msgPh: "Número de ventanas, orientación, plazo aproximado…",
+        send: "Enviar solicitud", sent: "Enviado · te escribimos pronto",
+      },
+      a: { show: "Showroom", hours: "Horario", direct: "Directo" },
+    },
+    foot: { craft: "Hecho a mano en Madrid y Sevilla", note: "Persianas, toldos y cortinas a medida" },
+  },
+  en: {
+    nav: { catalogue: "Catalogue", materials: "Materials", studio: "Studio", contact: "Estimate" },
+    hero: {
+      eyebrow: "Blinds & awnings · Madrid · Seville · since 1998",
+      titleB: "Venetian",
+      lede1: "A workshop's craft for",
+      lede2: "dressing the light",
+      lede3: "of every facade. We measure, build and install.",
+      cta: "Request a quote",
+      cta2: "See catalogue",
+      met1: { t: "Bespoke", s: "Every opening hand-measured and signed." },
+      met2: { t: "In-house install", s: "Our own crew, never subcontracted." },
+      met3: { t: "10-year warranty", s: "Mechanisms and finishes, no fine print." },
+    },
+    marquee: ["Made to measure", "Wood, aluminium & technical fabric", "Free site visit & estimate", "Motorisation available", "10-year warranty", "Workshops in Madrid & Seville"],
+    cat: {
+      eyebrow: "Catalogue",
+      titleA: "Three families,",
+      titleB: "one way of working.",
+      meta: "Designed for Mediterranean light. Adaptable to facade, balcony, terrace or interior.",
+      cta: "Request this piece",
+      items: [
+        {
+          name: "Venetian",
+          nameItalic: "blinds.",
+          copy: "The founding piece. Tilting horizontal slats that dose the light to the millimetre and frame the view in lines. For windows, balcony doors or floor-to-ceiling panels.",
+          specs: ["25 / 35 / 50 mm slat", "8 woods · 12 aluminiums", "Cord or motor", "Interior and exterior"],
+          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Awnings",
+          nameItalic: "& cassettes.",
+          copy: "Shade that breathes with the air. Solution-dyed acrylic canvases over extruded aluminium. Folding-arm, full cassette or bioclimatic pergola.",
+          specs: ["Up to 6 m projection", "30 fabrics · 4 frames", "Wind sensor included", "Somfy motor"],
+          img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Vertical",
+          nameItalic: "& screen curtains.",
+          copy: "Lines that organise the gaze in offices, retail and double-height rooms. Screen fabric from 1% to 14% openness, vertical louvres in fabric or thin aluminium.",
+          specs: ["89 / 127 mm louvre", "20 screen weaves", "Chain, crank or motor", "For very large glazings"],
+          img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80&auto=format&fit=crop",
+        },
+      ],
+    },
+    mat: {
+      eyebrow: "Materials",
+      titleA: "Honest matter,",
+      titleB: "lasting touch.",
+      meta: "Workshop-treated woods, anodised aluminiums and European technical fabrics. Finishes that age with dignity.",
+      s1: { n: "Red cedar", s: "Wood · warm" },
+      s2: { n: "Burmese teak", s: "Wood · resilient" },
+      s3: { n: "Matte aluminium", s: "Metal · architectural" },
+      s4: { n: "Bronze aluminium", s: "Metal · warm" },
+      s5: { n: "Acrylic canvas", s: "Fabric · 12 colours" },
+      s6: { n: "Technical screen", s: "Fabric · solar" },
+    },
+    est: {
+      eyebrow: "Studio",
+      titleA: "Twenty-six years",
+      titleB: "dressing windows.",
+      meta: "Three generations, one workshop. We began in a Madrid passage in 1998 and still hand-measure every opening.",
+      figcap: "Madrid workshop · 2025",
+      p1: "We have spent more than two decades dressing facades and windows in homes, retail and one-off projects. We work in our own workshop, measure every opening and sign every installation. We do not run a catalogue — we make pieces that last.",
+      p2: "What is done well is done once.",
+      s1: "Years of craft",
+      s2: "Signed projects",
+      s3: "Available finishes",
+      s4: "Own workshops",
+    },
+    con: {
+      eyebrow: "Estimate",
+      titleA: "Tell us",
+      titleB: "about your project.",
+      meta: "We visit, measure and send a quote in under five working days. No strings attached.",
+      f: {
+        name: "Name", namePh: "Your full name",
+        email: "Email",
+        loc: "Location", locPh: "City or postal code",
+        type: "Project type", typePh: "Select —",
+        opt1: "Private home", opt2: "Retail / shop", opt3: "Hospitality / hotel", opt4: "Renovation or new build",
+        msg: "Details", msgPh: "Number of windows, orientation, approximate timeline…",
+        send: "Send request", sent: "Sent · we'll write back soon",
+      },
+      a: { show: "Showroom", hours: "Hours", direct: "Direct" },
+    },
+    foot: { craft: "Made by hand in Madrid & Seville", note: "Bespoke blinds, awnings & curtains" },
+  },
+};
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "warm",
+  "motion": "on"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [lang, setLang] = React.useState("es");
+  const t = COPY[lang];
+  const [tw, setTweak] = (typeof useTweaks === "function") ? useTweaks(TWEAK_DEFAULTS) : [TWEAK_DEFAULTS, () => {}];
+
+  // attach theme + motion attrs to <html>
+  React.useEffect(() => {
+    document.documentElement.setAttribute("data-theme", tw.theme);
+    document.documentElement.setAttribute("data-motion", tw.motion);
+  }, [tw.theme, tw.motion]);
+
+  // Drive --slat-open variable from scroll within hero
+  React.useEffect(() => {
+    const onScroll = () => {
+      const wh = window.innerHeight;
+      const p = Math.min(1, Math.max(0, window.scrollY / (wh * 1.2)));
+      document.documentElement.style.setProperty("--slat-open", String(p));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <React.Fragment>
+      <div className="slats" aria-hidden="true"></div>
+      <Nav t={t} lang={lang} setLang={setLang} />
+      <Hero t={t} />
+      <Marquee t={t} />
+      <Catalogo t={t} />
+      <Materiales t={t} />
+      <Atelier lang={lang} />
+      <Estudio t={t} />
+      <Contacto t={t} />
+      <Footer t={t} />
+
+      {typeof TweaksPanel === "function" && (
+        <TweaksPanel title="Tweaks">
+          <TweakSection title="Paleta">
+            <TweakRadio
+              label="Tono"
+              value={tw.theme}
+              onChange={(v) => setTweak("theme", v)}
+              options={[
+                { value: "warm", label: "Cálido" },
+                { value: "ivory", label: "Marfil" },
+                { value: "slate", label: "Pizarra" },
+              ]}
+            />
+          </TweakSection>
+          <TweakSection title="Movimiento">
+            <TweakRadio
+              label="Intensidad"
+              value={tw.motion}
+              onChange={(v) => setTweak("motion", v)}
+              options={[
+                { value: "on", label: "Activo" },
+                { value: "calm", label: "Calmo" },
+                { value: "off", label: "Sin" },
+              ]}
+            />
+          </TweakSection>
+          <TweakSection title="Idioma">
+            <TweakRadio
+              label="Lang"
+              value={lang}
+              onChange={setLang}
+              options={[
+                { value: "es", label: "Español" },
+                { value: "en", label: "English" },
+              ]}
+            />
+          </TweakSection>
+        </TweaksPanel>
+      )}
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

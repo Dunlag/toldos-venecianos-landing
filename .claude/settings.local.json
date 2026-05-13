@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp '/c/Users/FernandoPinillaValbu/.claude/projects/C--Users-FernandoPinillaValbu-Documents-proyectos-PERSONALES-toldos-venecianos/b41fce67-3620-44f2-9682-e001bcc84dd2/tool-results/extracted/prueba-de-dise-o/project/Toldo Venecianos.html' '/c/Users/FernandoPinillaValbu/Documents/proyectos/PERSONALES/toldos venecianos/Toldos Venecianos.html')",
+      "Bash(cp /c/Users/FernandoPinillaValbu/.claude/projects/C--Users-FernandoPinillaValbu-Documents-proyectos-PERSONALES-toldos-venecianos/b41fce67-3620-44f2-9682-e001bcc84dd2/tool-results/extracted/prueba-de-dise-o/project/styles.css '/c/Users/FernandoPinillaValbu/Documents/proyectos/PERSONALES/toldos venecianos/styles.css')",
+      "Bash(cp /c/Users/FernandoPinillaValbu/.claude/projects/C--Users-FernandoPinillaValbu-Documents-proyectos-PERSONALES-toldos-venecianos/b41fce67-3620-44f2-9682-e001bcc84dd2/tool-results/extracted/prueba-de-dise-o/project/tweaks-panel.jsx '/c/Users/FernandoPinillaValbu/Documents/proyectos/PERSONALES/toldos venecianos/tweaks-panel.jsx')",
+      "Bash(cp /c/Users/FernandoPinillaValbu/.claude/projects/C--Users-FernandoPinillaValbu-Documents-proyectos-PERSONALES-toldos-venecianos/b41fce67-3620-44f2-9682-e001bcc84dd2/tool-results/extracted/prueba-de-dise-o/project/sections.jsx '/c/Users/FernandoPinillaValbu/Documents/proyectos/PERSONALES/toldos venecianos/sections.jsx')",
+      "Bash(cp /c/Users/FernandoPinillaValbu/.claude/projects/C--Users-FernandoPinillaValbu-Documents-proyectos-PERSONALES-toldos-venecianos/b41fce67-3620-44f2-9682-e001bcc84dd2/tool-results/extracted/prueba-de-dise-o/project/configurator.jsx '/c/Users/FernandoPinillaValbu/Documents/proyectos/PERSONALES/toldos venecianos/configurator.jsx')",
+      "Bash(ls \"C:\\\\Users\\\\FernandoPinillaValbu\\\\Documents\\\\proyectos\\\\PERSONALES\\\\toldos venecianos\\\\\")",
+      "Bash(ls \"C:\\\\Users\\\\FernandoPinillaValbu\\\\Downloads\\\\\" | head -20)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

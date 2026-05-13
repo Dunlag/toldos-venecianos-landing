@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="warm" data-motion="on">
+<head>
+  <meta charset="UTF-8" />
+  <title>Toldos Venecianos — Persianas y toldos a medida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Persianas venecianas y toldos a medida. Taller propio en Madrid y Sevilla. Desde 1998." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Italiana&display=swap" rel="stylesheet" />
+
+  <style>
+/* === Toldos Venecianos — editorial styles === */
+
+:root {
+  --cream: #f3efe6;
+  --cream-2: #ebe4d4;
+  --paper: #f7f3ea;
+  --ink: #161514;
+  --ink-2: #2a2724;
+  --tan: #c9a37a;
+  --tan-dark: #8b6f47;
+  --rule: rgba(22, 21, 20, 0.18);
+  --rule-soft: rgba(22, 21, 20, 0.08);
+  --slat-open: 0;
+  --sun-x: 30vw;
+  --sun-y: 20vh;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(201, 163, 122, 0.10), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(201, 163, 122, 0.06), transparent 60%),
+    var(--cream);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.45'/></svg>");
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.serif-display { font-family: 'Italiana', 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: -0.01em; }
+.serif { font-family: 'Cormorant Garamond', serif; }
+.italic { font-style: italic; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; font-family: 'Cormorant Garamond', serif; }
+.num { font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+
+.shell { max-width: 1440px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 720px) { .shell { padding: 0 20px; } }
+
+.rule { height: 1px; background: var(--rule); width: 100%; }
+.rule-soft { height: 1px; background: var(--rule-soft); width: 100%; }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 40;
+  padding: 20px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  mix-blend-mode: multiply;
+  transition: background 0.3s ease;
+}
+.nav.scrolled {
+  background: rgba(243, 239, 230, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule-soft);
+  mix-blend-mode: normal;
+}
+.nav-mark { font-family: 'Italiana', serif; font-size: 22px; letter-spacing: 0.02em; }
+.nav-mark sup { font-size: 0.5em; vertical-align: super; opacity: 0.6; margin-left: 2px; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 13px; letter-spacing: 0.06em; opacity: 0.78; transition: opacity 0.2s; }
+.nav-links a:hover { opacity: 1; }
+.lang-toggle { display: flex; gap: 6px; align-items: center; font-size: 12px; letter-spacing: 0.1em; }
+.lang-toggle button { padding: 4px 8px; border-radius: 999px; opacity: 0.5; transition: opacity 0.2s; }
+.lang-toggle button.active { opacity: 1; background: var(--ink); color: var(--cream); }
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+  .nav { padding: 16px 20px; }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 0 60px;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.hero-inner { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.hero-meta {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  align-items: end; gap: 24px;
+  padding-top: 40px;
+}
+.hero-meta .col { font-size: 13px; line-height: 1.4; opacity: 0.72; }
+.hero-meta .col strong { font-weight: 500; display: block; opacity: 1; margin-bottom: 4px; letter-spacing: 0.04em; }
+.hero-tag { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; display: flex; align-items: center; gap: 12px; }
+.hero-tag::before { content: ""; width: 32px; height: 1px; background: currentColor; opacity: 0.5; }
+
+.hero-title {
+  font-family: 'Italiana', serif;
+  font-size: clamp(64px, 16vw, 260px);
+  line-height: 0.86;
+  letter-spacing: -0.015em;
+  font-weight: 400;
+  margin: 32px 0 24px;
+  position: relative;
+}
+.hero-title .word { display: block; }
+.hero-title .word-2 { padding-left: 8vw; font-style: italic; font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+.hero-title sup { font-family: 'Cormorant Garamond', serif; font-size: 0.18em; vertical-align: super; margin-left: 0.04em; opacity: 0.7; font-style: italic; font-weight: 300; }
+
+.hero-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: start;
+  padding-top: 24px; border-top: 1px solid var(--rule);
+  margin-top: 24px;
+}
+.hero-row .lede { font-size: 22px; line-height: 1.32; max-width: 28ch; font-weight: 400; }
+.hero-row .lede em { color: var(--tan-dark); }
+.hero-row .actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+@media (max-width: 720px) { .hero-row { grid-template-columns: 1fr; gap: 24px; } .hero-meta { grid-template-columns: 1fr 1fr; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 14px 22px 14px 24px;
+  border-radius: 999px;
+  background: var(--ink); color: var(--cream);
+  font-size: 14px; letter-spacing: 0.04em;
+  transition: gap 0.25s ease, background 0.25s ease;
+}
+.btn:hover { gap: 18px; background: var(--tan-dark); }
+.btn .dot {
+  width: 32px; height: 32px; border-radius: 999px;
+  background: var(--cream); color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: transform 0.25s ease;
+}
+.btn:hover .dot { transform: rotate(-45deg); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 0;
+  font-size: 14px; letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--ink);
+  transition: gap 0.2s ease, opacity 0.2s ease;
+}
+.btn-ghost:hover { gap: 16px; }
+
+.sun {
+  position: absolute;
+  width: 70vw; height: 80vh;
+  top: 0; left: 0;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 218, 150, 0.55) 0%,
+    rgba(255, 200, 130, 0.30) 25%,
+    rgba(255, 180, 110, 0.10) 50%,
+    transparent 70%);
+  filter: blur(40px);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+  animation: sunDrift 32s ease-in-out infinite alternate;
+}
+@keyframes sunDrift {
+  0%   { transform: translate(-25vw, -10vh) rotate(0deg) scale(1); opacity: 0.85; }
+  35%  { transform: translate(10vw, 5vh) rotate(8deg) scale(1.15); opacity: 1; }
+  70%  { transform: translate(45vw, -5vh) rotate(-4deg) scale(0.95); opacity: 0.9; }
+  100% { transform: translate(60vw, 15vh) rotate(6deg) scale(1.1); opacity: 0.8; }
+}
+
+.sun.sun-2 {
+  width: 50vw; height: 60vh;
+  background: radial-gradient(ellipse at center,
+    rgba(201, 163, 122, 0.4) 0%,
+    rgba(201, 163, 122, 0.15) 40%,
+    transparent 70%);
+  animation: sunDrift2 48s ease-in-out infinite alternate;
+  animation-delay: -12s;
+}
+@keyframes sunDrift2 {
+  0%   { transform: translate(60vw, 50vh) scale(1); }
+  100% { transform: translate(20vw, 20vh) scale(1.3); }
+}
+
+.slats {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  opacity: calc(0.55 - var(--slat-open, 0) * 0.45);
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(22, 21, 20, calc(0.18 + var(--slat-open, 0) * -0.10)) 0px,
+    rgba(22, 21, 20, calc(0.18 + var(--slat-open, 0) * -0.10)) calc(2px + var(--slat-open, 0) * 0.5px),
+    transparent calc(2px + var(--slat-open, 0) * 0.5px),
+    transparent calc(18px + var(--slat-open, 0) * 14px)
+  );
+  transform: skewY(-1.2deg) translateY(calc(var(--slat-open, 0) * -10px));
+  transition: transform 0.4s ease;
+  mix-blend-mode: multiply;
+}
+
+.slat-drift {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    176deg,
+    rgba(22, 21, 20, 0.07) 0,
+    rgba(22, 21, 20, 0.07) 3px,
+    transparent 3px,
+    transparent 38px
+  );
+  animation: slatDrift 24s linear infinite;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+}
+@keyframes slatDrift {
+  from { background-position-y: 0; }
+  to   { background-position-y: 200px; }
+}
+
+.section {
+  position: relative;
+  padding: 120px 0;
+  z-index: 2;
+}
+.section-head {
+  display: grid; grid-template-columns: auto 1fr auto;
+  gap: 32px; align-items: end;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 64px;
+}
+.section-head .num { font-family: 'Italiana', serif; font-size: 14px; letter-spacing: 0.2em; opacity: 0.55; }
+.section-head h2 { font-family: 'Italiana', serif; font-weight: 400; font-size: clamp(40px, 5.5vw, 84px); line-height: 0.95; letter-spacing: -0.01em; }
+.section-head h2 em { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+.section-head .meta { font-size: 13px; opacity: 0.65; max-width: 26ch; line-height: 1.4; }
+@media (max-width: 720px) {
+  .section { padding: 80px 0; }
+  .section-head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.product:nth-child(even) { direction: rtl; }
+.product:nth-child(even) > * { direction: ltr; }
+.product-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+.product-media img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+  filter: saturate(0.95) contrast(1.02);
+}
+.product:hover .product-media img { transform: scale(1.04); }
+.product-media::after {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(0,0,0, 0.10) 0,
+    rgba(0,0,0, 0.10) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+.product:hover .product-media::after { opacity: 0.2; }
+
+.product-body { display: flex; flex-direction: column; gap: 18px; }
+.product-body .nm { font-family: 'Italiana', serif; font-size: clamp(36px, 4.5vw, 64px); line-height: 0.95; letter-spacing: -0.005em; }
+.product-body .nm em { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+.product-body .copy { font-size: 17px; line-height: 1.5; max-width: 38ch; opacity: 0.82; }
+.product-body .specs { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-top: 12px; border-top: 1px solid var(--rule-soft); }
+.product-body .spec { font-size: 12px; letter-spacing: 0.08em; opacity: 0.65; text-transform: uppercase; }
+.product-index { font-family: 'Italiana', serif; font-size: 13px; letter-spacing: 0.2em; opacity: 0.5; }
+
+@media (max-width: 820px) {
+  .product { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
+  .product:nth-child(even) { direction: ltr; }
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 820px) { .materials-grid { grid-template-columns: 1fr 1fr; gap: 16px; } }
+@media (max-width: 520px) { .materials-grid { grid-template-columns: 1fr; } }
+
+.swatch {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  background: var(--cream-2);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 20px;
+  color: var(--ink);
+  transition: transform 0.4s ease;
+}
+.swatch::before {
+  content: ""; position: absolute; inset: 0;
+  background: var(--swatch-bg);
+  z-index: 0;
+}
+.swatch::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(115deg,
+    transparent 30%,
+    rgba(255, 240, 210, 0.45) 48%,
+    rgba(255, 220, 170, 0.15) 52%,
+    transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1);
+  z-index: 1;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.swatch:hover::after { transform: translateX(100%); }
+.swatch-content { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 4px; }
+.swatch .label { font-family: 'Italiana', serif; font-size: 22px; line-height: 1; letter-spacing: 0.01em; }
+.swatch .sub { font-size: 12px; letter-spacing: 0.08em; opacity: 0.72; text-transform: uppercase; }
+.swatch.dark { color: var(--cream); }
+
+.estudio {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.estudio-figure {
+  aspect-ratio: 4 / 5;
+  background: var(--cream-2);
+  position: relative;
+  overflow: hidden;
+}
+.estudio-figure img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9); }
+.estudio-figure::after {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(180deg,
+    rgba(0,0,0,0.12) 0, rgba(0,0,0,0.12) 1px,
+    transparent 1px, transparent 16px);
+  mix-blend-mode: multiply; opacity: 0.5;
+}
+.estudio-figcaption { font-size: 12px; letter-spacing: 0.1em; opacity: 0.6; padding-top: 12px; }
+.estudio-prose p { font-size: 21px; line-height: 1.45; margin-bottom: 18px; max-width: 38ch; }
+.estudio-prose p em { color: var(--tan-dark); }
+.stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; padding-top: 32px; margin-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.stat .num-big { font-family: 'Italiana', serif; font-size: 56px; line-height: 1; letter-spacing: -0.02em; }
+.stat .lab { font-size: 12px; letter-spacing: 0.1em; opacity: 0.7; text-transform: uppercase; margin-top: 6px; }
+@media (max-width: 820px) { .estudio { grid-template-columns: 1fr; gap: 32px; } }
+
+.contact {
+  background: var(--ink);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: ""; position: absolute;
+  width: 80vw; height: 80vh; top: -20%; right: -20%;
+  background: radial-gradient(ellipse at center,
+    rgba(201, 163, 122, 0.35), transparent 60%);
+  filter: blur(60px);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: sunDrift 38s ease-in-out infinite alternate;
+}
+.contact .section-head { border-bottom-color: rgba(243,239,230,0.15); }
+.contact .section-head .num { opacity: 0.5; }
+.contact .section-head .meta { opacity: 0.75; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 80px;
+  align-items: start;
+  position: relative; z-index: 2;
+}
+@media (max-width: 820px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.field { display: flex; flex-direction: column; gap: 6px; padding: 20px 0; border-bottom: 1px solid rgba(243,239,230,0.18); }
+.field label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; }
+.field input, .field textarea, .field select {
+  background: transparent; border: 0; color: var(--cream);
+  font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.3;
+  outline: none; padding: 4px 0;
+  appearance: none;
+}
+.field textarea { resize: vertical; min-height: 60px; font-size: 19px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 520px) { .field-row { grid-template-columns: 1fr; gap: 0; } }
+
+.contact-aside .item { padding: 20px 0; border-bottom: 1px solid rgba(243,239,230,0.18); }
+.contact-aside .item:last-child { border-bottom: 0; }
+.contact-aside .lab { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; margin-bottom: 6px; }
+.contact-aside .val { font-size: 18px; line-height: 1.4; }
+
+.btn-light {
+  background: var(--cream); color: var(--ink);
+  margin-top: 24px;
+}
+.btn-light .dot { background: var(--ink); color: var(--cream); }
+.btn-light:hover { background: var(--tan); }
+
+.footer { background: var(--ink); color: var(--cream); padding: 32px 0; font-size: 12px; letter-spacing: 0.08em; }
+.footer .row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; opacity: 0.7; }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-words { display: inline-flex; flex-wrap: wrap; gap: 0.18em; }
+.reveal-words .w { display: inline-block; overflow: hidden; clip-path: inset(0 -0.18em 0 -0.04em); padding: 0 0.04em 0 0; }
+.reveal-words .w span { display: inline-block; transform: translateY(110%); transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.reveal-words.in .w span { transform: translateY(0); }
+.reveal-char { display: inline-block; opacity: 0.18; transition: opacity 0.4s ease; }
+.reveal-char.lit { opacity: 1; }
+
+.scroll-reveal-text { font-size: 18px; line-height: 1.55; max-width: 60ch; }
+@media (min-width: 720px) { .scroll-reveal-text { font-size: 21px; } }
+
+.marquee {
+  position: relative;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+  padding: 18px 0;
+  white-space: nowrap;
+  display: flex;
+  z-index: 2;
+}
+.marquee-track {
+  display: inline-flex; gap: 64px;
+  animation: marquee 40s linear infinite;
+  padding-right: 64px;
+}
+.marquee-track span { font-family: 'Italiana', serif; font-size: 20px; letter-spacing: 0.08em; opacity: 0.75; }
+.marquee-track span::after { content: "·"; margin-left: 64px; opacity: 0.4; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+[data-theme="warm"]   { --cream: #f3efe6; --tan: #c9a37a; --tan-dark: #8b6f47; --ink: #161514; }
+[data-theme="ivory"]  { --cream: #f7f3e9; --tan: #b8895a; --tan-dark: #6b4d2c; --ink: #20180f; }
+[data-theme="slate"]  { --cream: #ece7da; --tan: #9c8b6e; --tan-dark: #514936; --ink: #0d0f10; }
+
+[data-motion="calm"]  .sun { animation-duration: 60s; }
+[data-motion="calm"]  .slat-drift { animation-duration: 48s; opacity: 0.4; }
+[data-motion="off"]   .sun, [data-motion="off"] .slat-drift, [data-motion="off"] .slats { display: none; }
+
+.atelier-section {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.atelier-section::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 30%, rgba(201, 163, 122, 0.22), transparent 55%);
+  pointer-events: none;
+}
+
+.atelier-stage {
+  position: relative;
+  height: var(--frame-h, 540px);
+  background: var(--ink-2);
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow:
+    0 30px 60px -30px rgba(22, 21, 20, 0.45),
+    inset 0 0 0 1px rgba(22, 21, 20, 0.85);
+  user-select: none;
+  z-index: 2;
+}
+.atelier-stage-a {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.atelier-scene { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.scene-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 55%;
+  filter: saturate(1.05) contrast(1.02);
+}
+.scene-tint {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(255, 200, 130, 0.18) 0%,
+      rgba(201, 137, 81, 0.10) 40%,
+      rgba(40, 22, 12, 0.25) 80%,
+      rgba(20, 12, 6, 0.45) 100%);
+  mix-blend-mode: multiply;
+}
+.scene-sky, .scene-horizon { display: none; }
+.scene-sunbeam {
+  position: absolute; top: -10%; right: -20%; width: 80%; height: 110%;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 230, 180, 0.6) 0%,
+    rgba(255, 200, 130, 0.25) 30%,
+    transparent 60%);
+  filter: blur(20px);
+  mix-blend-mode: screen;
+  animation: sunDrift 35s ease-in-out infinite alternate;
+}
+[data-motion="off"] .scene-sunbeam { animation: none; }
+
+.atelier-slats {
+  position: absolute;
+  top: 14px;
+  left: 0; right: 0;
+  bottom: 0;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  z-index: 2;
+}
+.slat-slot {
+  position: absolute;
+  left: 0; right: 0;
+  display: flex; align-items: center; justify-content: stretch;
+  pointer-events: none;
+}
+.slat-body {
+  width: 100%;
+  border-radius: 1.5px;
+  transition: height 0.18s ease, filter 0.35s ease, background 0.4s ease;
+  will-change: transform, height;
+}
+.light-streaks {
+  position: absolute;
+  left: 0; right: 0;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  transition: opacity 0.25s ease;
+}
+
+.atelier-headrail-a {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 14px;
+  z-index: 3;
+  box-shadow: 0 6px 8px -4px rgba(0,0,0,0.5);
+  transition: background 0.4s ease;
+}
+.atelier-headrail-a::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), transparent 60%);
+}
+
+.stage-readout {
+  position: absolute;
+  top: 26px; right: 24px;
+  z-index: 4;
+  text-align: right;
+  color: var(--cream);
+  display: flex; flex-direction: column; gap: 2px;
+  pointer-events: none;
+}
+.sr-line {
+  font-family: 'Italiana', serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.55);
+}
+.sr-line:first-child { font-size: 18px; opacity: 1; }
+
+.atelier-controls {
+  max-width: 1100px;
+  margin: 48px auto 0;
+  display: grid;
+  grid-template-columns: 1.4fr 1px 0.8fr 1px 1fr;
+  align-items: stretch;
+  gap: 32px;
+  padding: 36px 0 0;
+  border-top: 1px solid var(--rule);
+  position: relative; z-index: 2;
+}
+.ctrl-sep { background: var(--rule-soft); width: 1px; align-self: stretch; }
+
+.ctrl {
+  display: flex; flex-direction: column; gap: 20px;
+  min-width: 0;
+}
+.ctrl-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.ctrl-lab {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  font-weight: 500;
+}
+.ctrl-val {
+  font-family: 'Italiana', serif;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+.ctrl-sub {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.mat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.mat-chip {
+  position: relative;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 10px 10px 12px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--rule-soft);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+  min-width: 0;
+}
+.mat-chip:hover { border-color: var(--rule); background: rgba(255,255,255,0.4); }
+.mat-chip.is-active { border-color: var(--ink); background: rgba(255,255,255,0.55); }
+.mat-chip.is-active::after {
+  content: "";
+  position: absolute; left: 10px; right: 10px; bottom: -5px;
+  height: 2px; background: var(--ink);
+}
+.mat-swatch {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  border-radius: 2px;
+  background: var(--swatch);
+  margin-bottom: 6px;
+  box-shadow: inset 0 0 0 1px rgba(22,21,20,0.12);
+}
+.mat-name {
+  font-family: 'Italiana', serif;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+.mat-fam {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.width-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.width-pill {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px;
+  padding: 14px 8px;
+  background: transparent;
+  border: 1px solid var(--rule-soft);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.width-pill:hover { border-color: var(--rule); }
+.width-pill.is-active { border-color: var(--ink); background: var(--ink); color: var(--cream); }
+.width-num { font-family: 'Italiana', serif; font-size: 22px; line-height: 1; letter-spacing: 0; }
+.width-unit { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; }
+
+.tilt-wrap { padding: 6px 0 24px; position: relative; }
+.tilt-range {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 0;
+  cursor: pointer;
+}
+.tilt-range::-webkit-slider-runnable-track {
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.85;
+}
+.tilt-range::-moz-range-track {
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.85;
+}
+.tilt-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  margin-top: -7px;
+  box-shadow: 0 0 0 4px var(--cream), 0 0 0 5px var(--ink);
+  transition: transform 0.15s ease;
+  cursor: grab;
+}
+.tilt-range:active::-webkit-slider-thumb { cursor: grabbing; transform: scale(1.1); }
+.tilt-range::-moz-range-thumb {
+  width: 14px; height: 14px; border-radius: 999px;
+  background: var(--ink); border: 0;
+  box-shadow: 0 0 0 4px var(--cream), 0 0 0 5px var(--ink);
+  cursor: grab;
+}
+.tilt-ticks {
+  position: absolute; left: 0; right: 0; top: 22px;
+  font-size: 10px; letter-spacing: 0.14em; opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+.tilt-ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.tilt-state {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-top: 24px;
+  margin-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.atelier-foot {
+  max-width: 1100px;
+  margin: 56px auto 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+.atelier-note {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.7;
+  max-width: 52ch;
+}
+
+@media (max-width: 920px) {
+  .atelier-stage { height: 460px; }
+  .atelier-controls {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .atelier-controls .ctrl-sep { display: none; }
+  .ctrl { padding-bottom: 28px; border-bottom: 1px solid var(--rule-soft); }
+  .ctrl:last-child { border-bottom: 0; padding-bottom: 0; }
+  .stage-readout { top: 18px; right: 16px; }
+  .sr-line:first-child { font-size: 15px; }
+  .sr-line { font-size: 11px; }
+  .atelier-foot { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 520px) {
+  .atelier-stage { height: 380px; }
+  .mat-row { grid-template-columns: repeat(2, 1fr); }
+}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- tweaks-panel.jsx -->
+  <script type="text/babel">
+
+const __TWEAKS_STYLE = `
+  .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
+    max-height:calc(100vh - 32px);display:flex;flex-direction:column;
+    transform:scale(var(--dc-inv-zoom,1));transform-origin:bottom right;
+    background:rgba(250,249,247,.78);color:#29261b;
+    -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+    border:.5px solid rgba(255,255,255,.6);border-radius:14px;
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 12px 40px rgba(0,0,0,.18);
+    font:11.5px/1.4 ui-sans-serif,system-ui,-apple-system,sans-serif;overflow:hidden}
+  .twk-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:10px 8px 10px 14px;cursor:move;user-select:none}
+  .twk-hd b{font-size:12px;font-weight:600;letter-spacing:.01em}
+  .twk-x{appearance:none;border:0;background:transparent;color:rgba(41,38,27,.55);
+    width:22px;height:22px;border-radius:6px;cursor:default;font-size:13px;line-height:1}
+  .twk-x:hover{background:rgba(0,0,0,.06);color:#29261b}
+  .twk-body{padding:2px 14px 14px;display:flex;flex-direction:column;gap:10px;
+    overflow-y:auto;overflow-x:hidden;min-height:0;
+    scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.15) transparent}
+  .twk-row{display:flex;flex-direction:column;gap:5px}
+  .twk-row-h{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+  .twk-lbl{display:flex;justify-content:space-between;align-items:baseline;
+    color:rgba(41,38,27,.72)}
+  .twk-lbl>span:first-child{font-weight:500}
+  .twk-val{color:rgba(41,38,27,.5);font-variant-numeric:tabular-nums}
+  .twk-sect{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:rgba(41,38,27,.45);padding:10px 0 0}
+  .twk-sect:first-child{padding-top:0}
+  .twk-seg{position:relative;display:flex;padding:2px;border-radius:8px;
+    background:rgba(0,0,0,.06);user-select:none}
+  .twk-seg-thumb{position:absolute;top:2px;bottom:2px;border-radius:6px;
+    background:rgba(255,255,255,.9);box-shadow:0 1px 2px rgba(0,0,0,.12);
+    transition:left .15s cubic-bezier(.3,.7,.4,1),width .15s}
+  .twk-seg.dragging .twk-seg-thumb{transition:none}
+  .twk-seg button{appearance:none;position:relative;z-index:1;flex:1;border:0;
+    background:transparent;color:inherit;font:inherit;font-weight:500;min-height:22px;
+    border-radius:6px;cursor:default;padding:4px 6px;line-height:1.2;overflow-wrap:anywhere}
+`;
+
+function useTweaks(defaults) {
+  const [values, setValues] = React.useState(defaults);
+  const setTweak = React.useCallback((keyOrEdits, val) => {
+    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
+      ? keyOrEdits : { [keyOrEdits]: val };
+    setValues((prev) => ({ ...prev, ...edits }));
+  }, []);
+  return [values, setTweak];
+}
+
+function TweaksPanel({ title = 'Tweaks', children }) {
+  const [open, setOpen] = React.useState(false);
+  const dragRef = React.useRef(null);
+  const offsetRef = React.useRef({ x: 16, y: 16 });
+  const PAD = 16;
+
+  const clampToViewport = React.useCallback(() => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const w = panel.offsetWidth, h = panel.offsetHeight;
+    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
+    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
+    offsetRef.current = {
+      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
+      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y)),
+    };
+    panel.style.right = offsetRef.current.x + 'px';
+    panel.style.bottom = offsetRef.current.y + 'px';
+  }, []);
+
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      const t = e?.data?.type;
+      if (t === '__activate_edit_mode') setOpen(true);
+      else if (t === '__deactivate_edit_mode') setOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  const onDragStart = (e) => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const r = panel.getBoundingClientRect();
+    const sx = e.clientX, sy = e.clientY;
+    const startRight = window.innerWidth - r.right;
+    const startBottom = window.innerHeight - r.bottom;
+    const move = (ev) => {
+      offsetRef.current = {
+        x: startRight - (ev.clientX - sx),
+        y: startBottom - (ev.clientY - sy),
+      };
+      clampToViewport();
+    };
+    const up = () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseup', up);
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+
+  if (!open) return null;
+  return (
+    <>
+      <style>{__TWEAKS_STYLE}</style>
+      <div ref={dragRef} className="twk-panel"
+           style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
+        <div className="twk-hd" onMouseDown={onDragStart}>
+          <b>{title}</b>
+          <button className="twk-x" onMouseDown={(e) => e.stopPropagation()}
+                  onClick={() => setOpen(false)}>✕</button>
+        </div>
+        <div className="twk-body">{children}</div>
+      </div>
+    </>
+  );
+}
+
+function TweakSection({ title, label, children }) {
+  return (
+    <>
+      <div className="twk-sect">{title || label}</div>
+      {children}
+    </>
+  );
+}
+
+function TweakRow({ label, value, children, inline = false }) {
+  return (
+    <div className={inline ? 'twk-row twk-row-h' : 'twk-row'}>
+      <div className="twk-lbl">
+        <span>{label}</span>
+        {value != null && <span className="twk-val">{value}</span>}
+      </div>
+      {children}
+    </div>
+  );
+}
+
+function TweakRadio({ label, value, options, onChange }) {
+  const trackRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
+  const valueRef = React.useRef(value);
+  valueRef.current = value;
+
+  const labelLen = (o) => String(typeof o === 'object' ? o.label : o).length;
+  const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
+  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] ?? 0);
+
+  if (!fitsAsSegments) {
+    return (
+      <TweakRow label={label}>
+        <select className="twk-field" value={value} onChange={(e) => onChange(e.target.value)}
+                style={{appearance:'auto',width:'100%',height:26,padding:'0 8px',border:'.5px solid rgba(0,0,0,.1)',borderRadius:7,background:'rgba(255,255,255,.6)',font:'inherit',outline:'none'}}>
+          {options.map((o) => {
+            const v = typeof o === 'object' ? o.value : o;
+            const l = typeof o === 'object' ? o.label : o;
+            return <option key={v} value={v}>{l}</option>;
+          })}
+        </select>
+      </TweakRow>
+    );
+  }
+
+  const opts = options.map((o) => (typeof o === 'object' ? o : { value: o, label: o }));
+  const idx = Math.max(0, opts.findIndex((o) => o.value === value));
+  const n = opts.length;
+
+  const segAt = (clientX) => {
+    const r = trackRef.current.getBoundingClientRect();
+    const inner = r.width - 4;
+    const i = Math.floor(((clientX - r.left - 2) / inner) * n);
+    return opts[Math.max(0, Math.min(n - 1, i))].value;
+  };
+
+  const onPointerDown = (e) => {
+    setDragging(true);
+    const v0 = segAt(e.clientX);
+    if (v0 !== valueRef.current) onChange(v0);
+    const move = (ev) => {
+      if (!trackRef.current) return;
+      const v = segAt(ev.clientX);
+      if (v !== valueRef.current) onChange(v);
+    };
+    const up = () => {
+      setDragging(false);
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+
+  return (
+    <TweakRow label={label}>
+      <div ref={trackRef} role="radiogroup" onPointerDown={onPointerDown}
+           className={dragging ? 'twk-seg dragging' : 'twk-seg'}>
+        <div className="twk-seg-thumb"
+             style={{ left: `calc(2px + ${idx} * (100% - 4px) / ${n})`,
+                      width: `calc((100% - 4px) / ${n})` }} />
+        {opts.map((o) => (
+          <button key={o.value} type="button" role="radio" aria-checked={o.value === value}>
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </TweakRow>
+  );
+}
+
+Object.assign(window, {
+  useTweaks, TweaksPanel, TweakSection, TweakRow, TweakRadio,
+});
+  </script>
+
+  <!-- sections.jsx -->
+  <script type="text/babel">
+
+const { useEffect, useRef, useState, useMemo } = React;
+
+function useReveal(opts = { threshold: 0.2, once: true }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          setVisible(true);
+          if (opts.once) io.disconnect();
+        } else if (!opts.once) setVisible(false);
+      });
+    }, { threshold: opts.threshold, rootMargin: opts.rootMargin || "0px 0px -10% 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return [ref, visible];
+}
+
+function WordsPullUp({ text, className = "", as: Tag = "span", delay = 0 }) {
+  const [ref, vis] = useReveal();
+  const words = String(text).split(/\s+/);
+  return (
+    <Tag ref={ref} className={`reveal-words ${vis ? "in" : ""} ${className}`}>
+      {words.map((w, i) => (
+        <span className="w" key={i}>
+          <span style={{ transitionDelay: `${delay + i * 60}ms` }}>{w}{i < words.length - 1 ? " " : ""}</span>
+        </span>
+      ))}
+    </Tag>
+  );
+}
+
+function ProgressiveText({ text, className = "" }) {
+  const ref = useRef(null);
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    const onScroll = () => {
+      const r = el.getBoundingClientRect();
+      const wh = window.innerHeight;
+      const start = wh * 0.85;
+      const end   = wh * 0.2;
+      const traveled = (start - r.top) / (start - end);
+      setProgress(Math.max(0, Math.min(1, traveled)));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
+  }, []);
+  const chars = useMemo(() => Array.from(text), [text]);
+  const total = chars.length;
+  return (
+    <p ref={ref} className={`scroll-reveal-text ${className}`}>
+      {chars.map((c, i) => {
+        const t = i / total;
+        const lit = progress >= t - 0.02;
+        return <span key={i} className={`reveal-char ${lit ? "lit" : ""}`}>{c}</span>;
+      })}
+    </p>
+  );
+}
+
+function Nav({ t, lang, setLang }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onS = () => setScrolled(window.scrollY > 40);
+    onS(); window.addEventListener("scroll", onS, { passive: true });
+    return () => window.removeEventListener("scroll", onS);
+  }, []);
+  return (
+    <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
+      <a href="#top" className="nav-mark">Toldos Venecianos<sup>*</sup></a>
+      <div className="nav-links">
+        <a href="#catalogo">{t.nav.catalogue}</a>
+        <a href="#materiales">{t.nav.materials}</a>
+        <a href="#estudio">{t.nav.studio}</a>
+        <a href="#contacto">{t.nav.contact}</a>
+      </div>
+      <div className="lang-toggle">
+        <button onClick={() => setLang("es")} className={lang === "es" ? "active" : ""}>ES</button>
+        <span style={{ opacity: 0.4 }}>/</span>
+        <button onClick={() => setLang("en")} className={lang === "en" ? "active" : ""}>EN</button>
+      </div>
+    </nav>
+  );
+}
+
+function Hero({ t }) {
+  return (
+    <header className="hero" id="top">
+      <div className="sun"></div>
+      <div className="sun sun-2"></div>
+      <div className="slat-drift"></div>
+
+      <div className="shell hero-inner">
+        <div className="hero-tag reveal in" style={{ paddingTop: 32 }}>
+          <span>{t.hero.eyebrow}</span>
+        </div>
+
+        <div>
+          <h1 className="hero-title">
+            <WordsPullUp as="span" text="Toldos" className="word" />
+            <WordsPullUp as="span" text={t.hero.titleB} className="word word-2" delay={200} />
+          </h1>
+
+          <div className="hero-row">
+            <p className="lede">
+              {t.hero.lede1} <em>{t.hero.lede2}</em> {t.hero.lede3}
+            </p>
+            <div className="actions">
+              <a href="#contacto" className="btn">
+                {t.hero.cta}
+                <span className="dot" aria-hidden>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+              <a href="#catalogo" className="btn-ghost">{t.hero.cta2}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M6 9l6 6 6-6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-meta">
+            <div className="col"><strong>{t.hero.met1.t}</strong>{t.hero.met1.s}</div>
+            <div className="col"><strong>{t.hero.met2.t}</strong>{t.hero.met2.s}</div>
+            <div className="col"><strong>{t.hero.met3.t}</strong>{t.hero.met3.s}</div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function Marquee({ t }) {
+  const items = t.marquee;
+  const all = [...items, ...items];
+  return (
+    <div className="marquee">
+      <div className="marquee-track">
+        {all.map((it, i) => <span key={i}>{it}</span>)}
+      </div>
+    </div>
+  );
+}
+
+function Catalogo({ t }) {
+  return (
+    <section className="section" id="catalogo">
+      <div className="shell">
+        <div className="section-head">
+          <span className="num">01 — {t.cat.eyebrow}</span>
+          <h2><WordsPullUp text={t.cat.titleA} /> <em><WordsPullUp text={t.cat.titleB} delay={200} /></em></h2>
+          <span className="meta">{t.cat.meta}</span>
+        </div>
+
+        {t.cat.items.map((p, i) => {
+          const [ref, vis] = useReveal();
+          return (
+            <article key={i} className={`product reveal ${vis ? "in" : ""}`} ref={ref}>
+              <div className="product-media">
+                <img src={p.img} alt={p.name} loading="lazy" />
+              </div>
+              <div className="product-body">
+                <span className="product-index">{`0${i + 1}  /  ${String(t.cat.items.length).padStart(2, "0")}`}</span>
+                <h3 className="nm">{p.name} <em>{p.nameItalic}</em></h3>
+                <p className="copy">{p.copy}</p>
+                <div className="specs">
+                  {p.specs.map((s, j) => <span className="spec" key={j}>{s}</span>)}
+                </div>
+                <a className="btn-ghost" href="#contacto" style={{ marginTop: 8 }}>
+                  {t.cat.cta}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function Materiales({ t }) {
+  const swatches = [
+    { bg: "linear-gradient(125deg, #c5996a 0%, #8b5a2b 60%, #5e3a1c 100%)", dark: true,  name: t.mat.s1.n, sub: t.mat.s1.s },
+    { bg: "linear-gradient(115deg, #d4b483 0%, #a47148 70%, #6b4423 100%)", dark: true,  name: t.mat.s2.n, sub: t.mat.s2.s },
+    { bg: "linear-gradient(135deg, #e6e1d6 0%, #a8a39a 50%, #6f6a60 100%)", dark: false, name: t.mat.s3.n, sub: t.mat.s3.s },
+    { bg: "linear-gradient(120deg, #8a7150 0%, #5e4a30 60%, #2c2418 100%)", dark: true,  name: t.mat.s4.n, sub: t.mat.s4.s },
+    { bg: "linear-gradient(130deg, #f0e8d6 0%, #cdbf9d 60%, #9a8b66 100%)", dark: false, name: t.mat.s5.n, sub: t.mat.s5.s },
+    { bg: "linear-gradient(140deg, #2a2a26 0%, #46453d 50%, #6b685c 100%)", dark: true,  name: t.mat.s6.n, sub: t.mat.s6.s },
+  ];
+  return (
+    <section className="section" id="materiales">
+      <div className="shell">
+        <div className="section-head">
+          <span className="num">02 — {t.mat.eyebrow}</span>
+          <h2><WordsPullUp text={t.mat.titleA} /> <em><WordsPullUp text={t.mat.titleB} delay={200} /></em></h2>
+          <span className="meta">{t.mat.meta}</span>
+        </div>
+
+        <div className="materials-grid">
+          {swatches.map((s, i) => {
+            const [ref, vis] = useReveal();
+            return (
+              <div
+                key={i}
+                ref={ref}
+                className={`swatch ${s.dark ? "dark" : ""} reveal ${vis ? "in" : ""}`}
+                style={{ ["--swatch-bg"]: s.bg, transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="swatch-content">
+                  <span className="sub">{`0${i + 1} · ${s.sub}`}</span>
+                  <span className="label">{s.name}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Estudio({ t }) {
+  return (
+    <section className="section" id="estudio">
+      <div className="shell">
+        <div className="section-head">
+          <span className="num">04 — {t.est.eyebrow}</span>
+          <h2><WordsPullUp text={t.est.titleA} /> <em><WordsPullUp text={t.est.titleB} delay={200} /></em></h2>
+          <span className="meta">{t.est.meta}</span>
+        </div>
+
+        <div className="estudio">
+          <div>
+            <figure className="estudio-figure">
+              <img src="https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=1200&q=80&auto=format&fit=crop" alt="Taller" loading="lazy" />
+            </figure>
+            <figcaption className="estudio-figcaption">{t.est.figcap}</figcaption>
+          </div>
+
+          <div className="estudio-prose">
+            <ProgressiveText text={t.est.p1} />
+            <p style={{ marginTop: 24 }}><em>{t.est.p2}</em></p>
+
+            <div className="stats">
+              <div className="stat"><div className="num-big">26</div><div className="lab">{t.est.s1}</div></div>
+              <div className="stat"><div className="num-big">1.400</div><div className="lab">{t.est.s2}</div></div>
+              <div className="stat"><div className="num-big">60</div><div className="lab">{t.est.s3}</div></div>
+              <div className="stat"><div className="num-big">2</div><div className="lab">{t.est.s4}</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Contacto({ t }) {
+  const [sent, setSent] = useState(false);
+  const onSubmit = (e) => { e.preventDefault(); setSent(true); };
+  return (
+    <section className="section contact" id="contacto">
+      <div className="shell">
+        <div className="section-head">
+          <span className="num" style={{ color: "var(--cream)" }}>05 — {t.con.eyebrow}</span>
+          <h2 style={{ color: "var(--cream)" }}><WordsPullUp text={t.con.titleA} /> <em><WordsPullUp text={t.con.titleB} delay={200} /></em></h2>
+          <span className="meta">{t.con.meta}</span>
+        </div>
+
+        <div className="contact-grid">
+          <form onSubmit={onSubmit}>
+            <div className="field-row">
+              <div className="field">
+                <label>{t.con.f.name}</label>
+                <input required placeholder={t.con.f.namePh} />
+              </div>
+              <div className="field">
+                <label>{t.con.f.email}</label>
+                <input required type="email" placeholder="hola@ejemplo.com" />
+              </div>
+            </div>
+            <div className="field-row">
+              <div className="field">
+                <label>{t.con.f.loc}</label>
+                <input placeholder={t.con.f.locPh} />
+              </div>
+              <div className="field">
+                <label>{t.con.f.type}</label>
+                <select defaultValue="">
+                  <option value="" disabled>{t.con.f.typePh}</option>
+                  <option>{t.con.f.opt1}</option>
+                  <option>{t.con.f.opt2}</option>
+                  <option>{t.con.f.opt3}</option>
+                  <option>{t.con.f.opt4}</option>
+                </select>
+              </div>
+            </div>
+            <div className="field">
+              <label>{t.con.f.msg}</label>
+              <textarea rows="3" placeholder={t.con.f.msgPh}></textarea>
+            </div>
+            <button type="submit" className="btn btn-light">
+              {sent ? t.con.f.sent : t.con.f.send}
+              <span className="dot">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </button>
+          </form>
+
+          <aside className="contact-aside">
+            <div className="item">
+              <div className="lab">{t.con.a.show}</div>
+              <div className="val">C/ Ribera de Curtidores 24<br/>Madrid · 28005</div>
+              <div className="val" style={{ opacity: 0.7, marginTop: 8 }}>Pasaje del Aire 6<br/>Sevilla · 41010</div>
+            </div>
+            <div className="item">
+              <div className="lab">{t.con.a.hours}</div>
+              <div className="val">Lun — Vie · 09:30 — 19:00<br/>Sáb · 10:00 — 14:00</div>
+            </div>
+            <div className="item">
+              <div className="lab">{t.con.a.direct}</div>
+              <div className="val">+34 910 22 14 80<br/>hola@toldosvenecianos.es</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer({ t }) {
+  return (
+    <footer className="footer">
+      <div className="shell row">
+        <span style={{ fontFamily: "Italiana, serif", fontSize: 16, letterSpacing: "0.02em", opacity: 1 }}>
+          Toldos Venecianos<sup style={{ fontSize: "0.55em", marginLeft: 2, opacity: 0.6 }}>*</sup>
+        </span>
+        <span>© 2026 · {t.foot.craft}</span>
+        <span>{t.foot.note}</span>
+      </div>
+    </footer>
+  );
+}
+
+Object.assign(window, { Nav, Hero, Marquee, Catalogo, Materiales, Estudio, Contacto, Footer });
+  </script>
+
+  <!-- configurator.jsx -->
+  <script type="text/babel">
+
+const ATELIER_MATERIALS = [
+  {
+    id: "cedar",
+    name: { es: "Cedro rojo", en: "Red cedar" },
+    family: { es: "Madera", en: "Wood" },
+    swatch: "linear-gradient(135deg, #d4a373 0%, #8b5a2b 100%)",
+    grad: "linear-gradient(180deg, #d4a373 0%, #b5733f 35%, #7a4c22 70%, #4d2e15 100%)",
+    edge: "#3b2410",
+    sheen: "rgba(255, 220, 170, 0.55)",
+  },
+  {
+    id: "teak",
+    name: { es: "Teca birmana", en: "Burmese teak" },
+    family: { es: "Madera", en: "Wood" },
+    swatch: "linear-gradient(135deg, #e2c190 0%, #6b4423 100%)",
+    grad: "linear-gradient(180deg, #e2c190 0%, #b6884e 40%, #7a532a 75%, #4a3017 100%)",
+    edge: "#3a230d",
+    sheen: "rgba(255, 230, 180, 0.5)",
+  },
+  {
+    id: "alum",
+    name: { es: "Aluminio mate", en: "Matte aluminium" },
+    family: { es: "Metal", en: "Metal" },
+    swatch: "linear-gradient(135deg, #ece8df 0%, #6f6a60 100%)",
+    grad: "linear-gradient(180deg, #ece8df 0%, #c2bdb1 40%, #8a8478 75%, #4d4a42 100%)",
+    edge: "#37352f",
+    sheen: "rgba(255, 250, 240, 0.7)",
+  },
+  {
+    id: "bronze",
+    name: { es: "Bronce", en: "Bronze" },
+    family: { es: "Metal", en: "Metal" },
+    swatch: "linear-gradient(135deg, #9c7d54 0%, #1e1408 100%)",
+    grad: "linear-gradient(180deg, #9c7d54 0%, #6e5132 45%, #3e2c18 80%, #1e1408 100%)",
+    edge: "#150d05",
+    sheen: "rgba(255, 200, 140, 0.55)",
+  },
+];
+
+const SLAT_WIDTHS = [
+  { mm: 25, N: 30 },
+  { mm: 35, N: 22 },
+  { mm: 50, N: 15 },
+];
+
+const ATELIER_COPY = {
+  es: {
+    eyebrow: "Atelier",
+    titleA: "Vístela",
+    titleB: "antes de pedirla.",
+    meta: "Tres decisiones bastan. Selecciona acabado, ancho de lama e inclinación; la ventana responde en tiempo real.",
+    lMat: "Acabado",
+    lWidth: "Ancho de lama",
+    lTilt: "Inclinación",
+    rOpen: "Apertura",
+    note: "Esta combinación está disponible. Inspección, medición e instalación incluidas en el presupuesto.",
+    cta: "Pedir esta configuración",
+    closed: "cerrada",
+    open: "abierta",
+  },
+  en: {
+    eyebrow: "Atelier",
+    titleA: "Dress it",
+    titleB: "before you order.",
+    meta: "Three decisions are enough. Choose finish, slat width and tilt; the window responds in real time.",
+    lMat: "Finish",
+    lWidth: "Slat width",
+    lTilt: "Tilt",
+    rOpen: "Openness",
+    note: "This combination is available. Site visit, measurement and installation included in the estimate.",
+    cta: "Request this setup",
+    closed: "closed",
+    open: "open",
+  },
+};
+
+function Atelier({ lang }) {
+  const t = ATELIER_COPY[lang] || ATELIER_COPY.es;
+
+  const [tilt, setTilt] = React.useState(18);
+  const [matIdx, setMatIdx] = React.useState(0);
+  const [widthIdx, setWidthIdx] = React.useState(1);
+
+  const mat = ATELIER_MATERIALS[matIdx];
+  const width = SLAT_WIDTHS[widthIdx];
+  const N = width.N;
+
+  const FRAME_H = 540;
+  const visSpacing = FRAME_H / N;
+
+  const rad = (tilt * Math.PI) / 180;
+  const cos = Math.cos(rad);
+  const absSin = Math.abs(Math.sin(rad));
+  const showingBack = tilt < 0;
+  const openness = Math.round(absSin * 100);
+
+  const baseSlot = visSpacing;
+  const slatBodyH = Math.max(2.5, baseSlot * 0.86 * Math.abs(cos));
+
+  return (
+    <section className="section atelier-section" id="atelier">
+      <div className="shell">
+        <div className="section-head">
+          <span className="num">03 — {t.eyebrow}</span>
+          <h2>{t.titleA} <em>{t.titleB}</em></h2>
+          <span className="meta">{t.meta}</span>
+        </div>
+
+        <div className="atelier-stage atelier-stage-a" style={{ "--frame-h": `${FRAME_H}px` }}>
+          <div className="atelier-scene" aria-hidden="true">
+            <img
+              className="scene-photo"
+              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80&auto=format&fit=crop"
+              alt=""
+            />
+            <div className="scene-tint"></div>
+            <div className="scene-sunbeam"></div>
+          </div>
+
+          <div className="atelier-slats">
+            {Array.from({ length: N }).map((_, i) => {
+              const y = i * visSpacing;
+              return (
+                <div key={i} className="slat-slot" style={{ top: `${y}px`, height: `${visSpacing}px` }}>
+                  <div
+                    className="slat-body"
+                    style={{
+                      height: `${slatBodyH}px`,
+                      background: mat.grad,
+                      boxShadow: `0 ${1 + absSin * 2}px ${2 + absSin * 6}px rgba(0,0,0,${0.18 + absSin * 0.25}), inset 0 1px 0 ${mat.sheen}`,
+                      filter: showingBack ? "brightness(0.55) saturate(0.85)" : "none",
+                      transform: `translateY(${(visSpacing - slatBodyH) / 2}px)`,
+                    }}
+                  />
+                </div>
+              );
+            })}
+
+            <div
+              className="light-streaks"
+              aria-hidden="true"
+              style={{
+                opacity: Math.min(0.65, absSin * 0.9),
+                backgroundImage: `repeating-linear-gradient(
+                  180deg,
+                  transparent 0,
+                  transparent ${Math.max(0, visSpacing - 1)}px,
+                  rgba(255, 220, 160, ${0.35 + absSin * 0.35}) ${Math.max(0, visSpacing - 1)}px,
+                  rgba(255, 220, 160, ${0.35 + absSin * 0.35}) ${visSpacing}px
+                )`,
+                top: 0,
+                bottom: 0,
+              }}
+            />
+          </div>
+
+          <div className="atelier-headrail-a" style={{ background: mat.grad }}></div>
+
+          <div className="stage-readout">
+            <span className="sr-line">{mat.name[lang] || mat.name.es}</span>
+            <span className="sr-line">{width.mm} mm</span>
+            <span className="sr-line num">{Math.round(tilt)}° · {openness}% {openness < 8 ? t.closed : openness > 75 ? t.open : ""}</span>
+          </div>
+        </div>
+
+        <div className="atelier-controls">
+          <div className="ctrl">
+            <div className="ctrl-head">
+              <span className="ctrl-lab">{t.lMat}</span>
+              <span className="ctrl-val">{mat.name[lang] || mat.name.es}</span>
+            </div>
+            <div className="ctrl-body">
+              <div className="mat-row" role="radiogroup" aria-label={t.lMat}>
+                {ATELIER_MATERIALS.map((m, i) => (
+                  <button
+                    key={m.id}
+                    type="button"
+                    role="radio"
+                    aria-checked={i === matIdx}
+                    aria-label={m.name[lang] || m.name.es}
+                    className={`mat-chip ${i === matIdx ? "is-active" : ""}`}
+                    onClick={() => setMatIdx(i)}
+                    style={{ "--swatch": m.swatch }}
+                  >
+                    <span className="mat-swatch"></span>
+                    <span className="mat-name">{m.name[lang] || m.name.es}</span>
+                    <span className="mat-fam">{m.family[lang] || m.family.es}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="ctrl-sep" aria-hidden="true"></div>
+
+          <div className="ctrl">
+            <div className="ctrl-head">
+              <span className="ctrl-lab">{t.lWidth}</span>
+              <span className="ctrl-val num">{width.mm} mm</span>
+            </div>
+            <div className="ctrl-body">
+              <div className="width-row" role="radiogroup" aria-label={t.lWidth}>
+                {SLAT_WIDTHS.map((w, i) => (
+                  <button
+                    key={w.mm}
+                    type="button"
+                    role="radio"
+                    aria-checked={i === widthIdx}
+                    className={`width-pill ${i === widthIdx ? "is-active" : ""}`}
+                    onClick={() => setWidthIdx(i)}
+                  >
+                    <span className="width-num num">{w.mm}</span>
+                    <span className="width-unit">mm</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="ctrl-sep" aria-hidden="true"></div>
+
+          <div className="ctrl">
+            <div className="ctrl-head">
+              <span className="ctrl-lab">{t.lTilt}</span>
+              <span className="ctrl-val num">{Math.round(tilt)}°</span>
+            </div>
+            <div className="ctrl-body">
+              <div className="tilt-wrap">
+                <input
+                  type="range"
+                  min="-80"
+                  max="80"
+                  step="1"
+                  value={tilt}
+                  onChange={(e) => setTilt(parseInt(e.target.value, 10))}
+                  aria-label={t.lTilt}
+                  className="tilt-range"
+                />
+                <div className="tilt-ticks" aria-hidden="true">
+                  <span style={{ left: "0%" }}>−80°</span>
+                  <span style={{ left: "50%" }}>0°</span>
+                  <span style={{ left: "100%" }}>+80°</span>
+                </div>
+              </div>
+              <div className="tilt-state">
+                <span className="ctrl-sub">{t.rOpen}</span>
+                <span className="ctrl-sub num">{openness}%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="atelier-foot">
+          <p className="atelier-note">{t.note}</p>
+          <a className="btn" href="#contacto">
+            {t.cta}
+            <span className="dot" aria-hidden>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Atelier });
+  </script>
+
+  <!-- app.jsx -->
+  <script type="text/babel">
+
+const COPY = {
+  es: {
+    nav: { catalogue: "Catálogo", materials: "Materiales", studio: "Estudio", contact: "Presupuesto" },
+    hero: {
+      eyebrow: "Persianas y toldos · Madrid · Sevilla · 1998",
+      titleB: "Venecianos",
+      lede1: "Oficio de taller para",
+      lede2: "vestir la luz",
+      lede3: "de cada fachada. Medimos, fabricamos e instalamos.",
+      cta: "Pedir presupuesto",
+      cta2: "Ver catálogo",
+      met1: { t: "A medida", s: "Cada hueco se mide y se firma a mano." },
+      met2: { t: "Instalación propia", s: "Equipo en plantilla, sin subcontratas." },
+      met3: { t: "Garantía 10 años", s: "Mecanismos y acabados, sin letra pequeña." },
+    },
+    marquee: ["A medida", "Madera, aluminio y tela técnica", "Visita y presupuesto sin coste", "Mecanismo motorizable", "Garantía 10 años", "Talleres en Madrid y Sevilla"],
+    cat: {
+      eyebrow: "Catálogo",
+      titleA: "Tres familias,",
+      titleB: "una manera de hacer.",
+      meta: "Productos pensados para climas mediterráneos. Adaptables a fachada, balcón, terraza o interior.",
+      cta: "Pedir esta pieza",
+      items: [
+        {
+          name: "Persianas",
+          nameItalic: "venecianas.",
+          copy: "La pieza fundacional. Lamas horizontales orientables que dosifican la luz al milímetro y enmarcan la vista en líneas. Para ventanal, balconera o panel de techo a suelo.",
+          specs: ["Lama 25 / 35 / 50 mm", "8 maderas · 12 aluminios", "Cuerda o motor", "Interior y exterior"],
+          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Toldos",
+          nameItalic: "de brazo y cofre.",
+          copy: "Sombra que respira con el aire. Lonas acrílicas teñidas en masa y estructuras de aluminio extruido. Brazo articulado, cofre integral o pérgola bioclimática.",
+          specs: ["Hasta 6 m de salida", "30 lonas · 4 estructuras", "Sensor de viento incluido", "Motor Somfy"],
+          img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Cortinas",
+          nameItalic: "verticales y screen.",
+          copy: "Líneas que ordenan la mirada en oficinas, locales y dobles alturas. Tejido screen con factor solar de 1% a 14%, lamas verticales en tela o aluminio fino.",
+          specs: ["Lama 89 / 127 mm", "20 tejidos screen", "Cadena, manivela o motor", "Especial vidrieras grandes"],
+          img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80&auto=format&fit=crop",
+        },
+      ],
+    },
+    mat: {
+      eyebrow: "Materiales",
+      titleA: "Materia noble,",
+      titleB: "tacto que dura.",
+      meta: "Maderas tratadas en taller, aluminios anodizados y tejidos técnicos europeos. Acabados que envejecen con dignidad.",
+      s1: { n: "Cedro rojo", s: "Madera · cálida" },
+      s2: { n: "Teca birmana", s: "Madera · resistente" },
+      s3: { n: "Aluminio mate", s: "Metal · arquitectónico" },
+      s4: { n: "Aluminio bronce", s: "Metal · cálido" },
+      s5: { n: "Tela acrílica", s: "Tejido · 12 colores" },
+      s6: { n: "Screen técnico", s: "Tejido · solar" },
+    },
+    est: {
+      eyebrow: "Estudio",
+      titleA: "Veintiséis años",
+      titleB: "vistiendo ventanas.",
+      meta: "Tres generaciones de un mismo taller. Empezamos en un pasaje de Madrid en 1998 y seguimos midiendo cada hueco a mano.",
+      figcap: "Taller de Madrid · 2025",
+      p1: "Llevamos más de dos décadas vistiendo fachadas y ventanas en hogares, locales y proyectos singulares. Trabajamos en taller propio, medimos cada vano y firmamos cada instalación. No hacemos catálogo: hacemos piezas que duran.",
+      p2: "Lo que se hace bien, se hace una vez.",
+      s1: "Años de oficio",
+      s2: "Proyectos firmados",
+      s3: "Acabados disponibles",
+      s4: "Talleres propios",
+    },
+    con: {
+      eyebrow: "Presupuesto",
+      titleA: "Cuéntanos",
+      titleB: "el proyecto.",
+      meta: "Te visitamos, medimos y enviamos un presupuesto en menos de cinco días laborables. Sin compromiso.",
+      f: {
+        name: "Nombre", namePh: "Cómo te llamas",
+        email: "Email",
+        loc: "Localización", locPh: "Ciudad o código postal",
+        type: "Tipo de proyecto", typePh: "Selecciona —",
+        opt1: "Vivienda particular", opt2: "Local comercial", opt3: "Hostelería / hotel", opt4: "Reforma o nueva obra",
+        msg: "Detalles", msgPh: "Número de ventanas, orientación, plazo aproximado…",
+        send: "Enviar solicitud", sent: "Enviado · te escribimos pronto",
+      },
+      a: { show: "Showroom", hours: "Horario", direct: "Directo" },
+    },
+    foot: { craft: "Hecho a mano en Madrid y Sevilla", note: "Persianas, toldos y cortinas a medida" },
+  },
+  en: {
+    nav: { catalogue: "Catalogue", materials: "Materials", studio: "Studio", contact: "Estimate" },
+    hero: {
+      eyebrow: "Blinds & awnings · Madrid · Seville · since 1998",
+      titleB: "Venetian",
+      lede1: "A workshop's craft for",
+      lede2: "dressing the light",
+      lede3: "of every facade. We measure, build and install.",
+      cta: "Request a quote",
+      cta2: "See catalogue",
+      met1: { t: "Bespoke", s: "Every opening hand-measured and signed." },
+      met2: { t: "In-house install", s: "Our own crew, never subcontracted." },
+      met3: { t: "10-year warranty", s: "Mechanisms and finishes, no fine print." },
+    },
+    marquee: ["Made to measure", "Wood, aluminium & technical fabric", "Free site visit & estimate", "Motorisation available", "10-year warranty", "Workshops in Madrid & Seville"],
+    cat: {
+      eyebrow: "Catalogue",
+      titleA: "Three families,",
+      titleB: "one way of working.",
+      meta: "Designed for Mediterranean light. Adaptable to facade, balcony, terrace or interior.",
+      cta: "Request this piece",
+      items: [
+        {
+          name: "Venetian",
+          nameItalic: "blinds.",
+          copy: "The founding piece. Tilting horizontal slats that dose the light to the millimetre and frame the view in lines. For windows, balcony doors or floor-to-ceiling panels.",
+          specs: ["25 / 35 / 50 mm slat", "8 woods · 12 aluminiums", "Cord or motor", "Interior and exterior"],
+          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Awnings",
+          nameItalic: "& cassettes.",
+          copy: "Shade that breathes with the air. Solution-dyed acrylic canvases over extruded aluminium. Folding-arm, full cassette or bioclimatic pergola.",
+          specs: ["Up to 6 m projection", "30 fabrics · 4 frames", "Wind sensor included", "Somfy motor"],
+          img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+        },
+        {
+          name: "Vertical",
+          nameItalic: "& screen curtains.",
+          copy: "Lines that organise the gaze in offices, retail and double-height rooms. Screen fabric from 1% to 14% openness, vertical louvres in fabric or thin aluminium.",
+          specs: ["89 / 127 mm louvre", "20 screen weaves", "Chain, crank or motor", "For very large glazings"],
+          img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80&auto=format&fit=crop",
+        },
+      ],
+    },
+    mat: {
+      eyebrow: "Materials",
+      titleA: "Honest matter,",
+      titleB: "lasting touch.",
+      meta: "Workshop-treated woods, anodised aluminiums and European technical fabrics. Finishes that age with dignity.",
+      s1: { n: "Red cedar", s: "Wood · warm" },
+      s2: { n: "Burmese teak", s: "Wood · resilient" },
+      s3: { n: "Matte aluminium", s: "Metal · architectural" },
+      s4: { n: "Bronze aluminium", s: "Metal · warm" },
+      s5: { n: "Acrylic canvas", s: "Fabric · 12 colours" },
+      s6: { n: "Technical screen", s: "Fabric · solar" },
+    },
+    est: {
+      eyebrow: "Studio",
+      titleA: "Twenty-six years",
+      titleB: "dressing windows.",
+      meta: "Three generations, one workshop. We began in a Madrid passage in 1998 and still hand-measure every opening.",
+      figcap: "Madrid workshop · 2025",
+      p1: "We have spent more than two decades dressing facades and windows in homes, retail and one-off projects. We work in our own workshop, measure every opening and sign every installation. We do not run a catalogue — we make pieces that last.",
+      p2: "What is done well is done once.",
+      s1: "Years of craft",
+      s2: "Signed projects",
+      s3: "Available finishes",
+      s4: "Own workshops",
+    },
+    con: {
+      eyebrow: "Estimate",
+      titleA: "Tell us",
+      titleB: "about your project.",
+      meta: "We visit, measure and send a quote in under five working days. No strings attached.",
+      f: {
+        name: "Name", namePh: "Your full name",
+        email: "Email",
+        loc: "Location", locPh: "City or postal code",
+        type: "Project type", typePh: "Select —",
+        opt1: "Private home", opt2: "Retail / shop", opt3: "Hospitality / hotel", opt4: "Renovation or new build",
+        msg: "Details", msgPh: "Number of windows, orientation, approximate timeline…",
+        send: "Send request", sent: "Sent · we'll write back soon",
+      },
+      a: { show: "Showroom", hours: "Hours", direct: "Direct" },
+    },
+    foot: { craft: "Made by hand in Madrid & Seville", note: "Bespoke blinds, awnings & curtains" },
+  },
+};
+
+const TWEAK_DEFAULTS = { theme: "warm", motion: "on" };
+
+function App() {
+  const [lang, setLang] = React.useState("es");
+  const t = COPY[lang];
+  const [tw, setTweak] = (typeof useTweaks === "function") ? useTweaks(TWEAK_DEFAULTS) : [TWEAK_DEFAULTS, () => {}];
+
+  React.useEffect(() => {
+    document.documentElement.setAttribute("data-theme", tw.theme);
+    document.documentElement.setAttribute("data-motion", tw.motion);
+  }, [tw.theme, tw.motion]);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      const wh = window.innerHeight;
+      const p = Math.min(1, Math.max(0, window.scrollY / (wh * 1.2)));
+      document.documentElement.style.setProperty("--slat-open", String(p));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <React.Fragment>
+      <div className="slats" aria-hidden="true"></div>
+      <Nav t={t} lang={lang} setLang={setLang} />
+      <Hero t={t} />
+      <Marquee t={t} />
+      <Catalogo t={t} />
+      <Materiales t={t} />
+      <Atelier lang={lang} />
+      <Estudio t={t} />
+      <Contacto t={t} />
+      <Footer t={t} />
+
+      {typeof TweaksPanel === "function" && (
+        <TweaksPanel title="Tweaks">
+          <TweakSection title="Paleta">
+            <TweakRadio
+              label="Tono"
+              value={tw.theme}
+              onChange={(v) => setTweak("theme", v)}
+              options={[
+                { value: "warm", label: "Cálido" },
+                { value: "ivory", label: "Marfil" },
+                { value: "slate", label: "Pizarra" },
+              ]}
+            />
+          </TweakSection>
+          <TweakSection title="Movimiento">
+            <TweakRadio
+              label="Intensidad"
+              value={tw.motion}
+              onChange={(v) => setTweak("motion", v)}
+              options={[
+                { value: "on", label: "Activo" },
+                { value: "calm", label: "Calmo" },
+                { value: "off", label: "Sin" },
+              ]}
+            />
+          </TweakSection>
+          <TweakSection title="Idioma">
+            <TweakRadio
+              label="Lang"
+              value={lang}
+              onChange={setLang}
+              options={[
+                { value: "es", label: "Español" },
+                { value: "en", label: "English" },
+              ]}
+            />
+          </TweakSection>
+        </TweaksPanel>
+      )}
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
