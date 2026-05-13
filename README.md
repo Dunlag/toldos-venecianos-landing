@@ -4,7 +4,7 @@ Landing page editorial para **Toldos Venecianos**, empresa de persianas venecian
 
 Desarrollada como pieza de portfolio con identidad visual minimalista, animaciones scroll-driven y configurador interactivo de lamas.
 
-**[Ver en vivo →](https://FernandoPinillaValbu.github.io/toldos-venecianos-landing/)**
+**[Ver en vivo →](https://dunlag.github.io/toldos-venecianos-landing/)**
 
 ---
 
